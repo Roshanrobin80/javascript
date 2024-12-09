@@ -32,7 +32,23 @@ else{
 
 // 3) electricity bill
 
-function elec()
-{
+function elec(){
+    let a=parseInt(document.getElementById("unit").value)
+    let div=document.getElementById("div")
 
+    if (a<=100){
+        div.innerHTML=0
+    }
+    else{
+        if (a<=200 && a>100){
+            let up=a-100
+            let ua=up*5
+            div.innerHTML=ua
+        }
+        else{
+            let ui=a-200
+            let us=ui*10+500
+            div.innerHTML=us
+        }
+    }
 }
