@@ -1,0 +1,21 @@
+string methods
+
+length
+char at(pos)=find letter
+concat = combine str
+ends with
+starts with
+slice = split
+trim start -trim empt space in starting ,eg: '    welcome    '  ='welcome    '
+trim end = opposite
+
+
+array methods
+
+pop - dlt last elm
+length
+at -position 
+push-add elm
+shif-remove 1st value from list
+unshift-add value to start
+push-add elm to end

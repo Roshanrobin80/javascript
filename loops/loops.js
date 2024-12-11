@@ -20,3 +20,13 @@
 //     i++
 // }
 // while(i<=10)
+
+let l=[1,2,3,4,5]
+// let l={name:'anu',age:23}
+// for (i in l){
+//     console.log(i);
+// }
+
+for (i of l){
+    console.log(i);
+}
