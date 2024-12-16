@@ -14,7 +14,7 @@
     <!-- <input type="text" id="demo"> -->
     <!-- <button onclick="fun1()">click</button>
     <h3 id="h3"></h3> -->
-
+<!-- 
     <table>
         <thead>
             <tr>
@@ -39,7 +39,59 @@
         <input type="number" name="" id="e_age" placeholder="Enter age">
         <input type="submit" value="Update">
 
-    </form>
-    <script src="sample.js"></script>
+    </form> -->
+
+    <h3 id="timer"></h3>
+
+    <script>
+        // try{
+        //     console.log(a);
+        // }
+        // catch(error){
+        //     console.log('error',error.message);
+
+        // }
+        // finally{
+        //     console.log('prg ends');
+            
+        // }
+
+        // console.log('start');
+        // for(i=0;i<=1000;i++){
+        //     console.log(i);
+            
+        // }
+        // console.log('end');
+
+
+
+        // console.log('start');
+        // setTimeout(()=>{
+        //     console.log('timer');
+            
+        // },2000)
+        // console.log('end');
+        
+        // T I M E R
+    
+        // let count=5
+        // let data=setInterval(()=>{
+        //     document.getElementById("timer").innerHTML=count
+        //     count--
+        //     if(count<0){
+        //         clearInterval(data)
+        //         document.getElementById("timer").innerHTML='Time up!'
+
+        //     }
+        // },1000)
+
+        let min=0
+        let sec=60
+        let data=setInterval(()=>{
+            document.getElementById("timer").innerHTML=min +':'sec
+        })
+    </script>
+
+    <!-- <script src="sample.js"></script> -->
 </body>
 </html>

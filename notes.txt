@@ -19,3 +19,7 @@ push-add elm
 shif-remove 1st value from list
 unshift-add value to start
 push-add elm to end
+
+
+synchronus-line by line execution
+asynchronus-
