@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation in python & js</title>
+</head>
+<body>
+
+    <!-- Validation using py -->
+
+    <!-- <form action="">
+        <input type="text" placeholder="enter name" required>
+        <input type="tel" placeholder="enter mobile number" required pattern="^[6-9]\d{9}">
+        <input type="submit" value="add" name="" id="">
+    </form> -->
+
+    <!-- Validation using js -->
+
+    <form id="form">
+        <input type="text" placeholder="enter name" required><br><br>
+        <input type="tel" placeholder="enter mobile number" id="no" required><br><br>
+        <input type="password" placeholder="enter password" id="pw"><br><br>
+        <h3 id="h3"></h3>
+        <input type="submit" value="add" name="" id="">
+    </form>
+
+    <script>
+        document.getElementById("form").addEventListener('submit',function(event){
+            event.preventDefault()
+            let no=document.getElementById("no").value
+            let pw=document.getElementById("pw").value
+            let h3=document.getElementById("h3")
+            if(/^[6-9]\d{9}/.test(no)){
+                h3.innerHTML='valid'
+                h3.style.color='green'
+            }
+            else{
+                h3.innerHTML='invalid'
+                h3.style.color='red'
+            }
+            if(/^[0-9]\d{16}/.test(pw)){
+                
+            }
+        })
+        
+    </script>
+</body>
+</html>

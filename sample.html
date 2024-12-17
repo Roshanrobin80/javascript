@@ -42,6 +42,8 @@
     </form> -->
 
     <h3 id="timer"></h3>
+    <img id="pic" src="img/old blck.jpeg" style="width: 250px; " alt=""> 
+
 
     <script>
         // try{
@@ -84,12 +86,24 @@
 
         //     }
         // },1000)
-
-        let min=0
-        let sec=60
+            
+        let min=1
+        let sec=5
         let data=setInterval(()=>{
-            document.getElementById("timer").innerHTML=min +':'sec
-        })
+            document.getElementById("timer").innerHTML=min +':'+sec
+            sec--
+            if(sec<0){
+                min--
+                sec=5
+                if(min<0){
+                    clearInterval(data)
+                    // alert('completed')
+                document.getElementById("pic").style.display='none'
+                }
+            }
+
+        },1000)
+
     </script>
 
     <!-- <script src="sample.js"></script> -->
