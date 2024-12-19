@@ -41,8 +41,8 @@
 
     </form> -->
 
-    <h3 id="timer"></h3>
-    <img id="pic" src="img/old blck.jpeg" style="width: 250px; " alt=""> 
+    <!-- <h3 id="timer"></h3>
+    <img id="pic" src="img/old blck.jpeg" style="width: 250px; " alt="">  -->
 
 
     <script>
@@ -74,7 +74,7 @@
         // },2000)
         // console.log('end');
         
-        // T I M E R
+        //******************** T I M E R************************
     
         // let count=5
         // let data=setInterval(()=>{
@@ -87,22 +87,83 @@
         //     }
         // },1000)
             
-        let min=1
-        let sec=5
-        let data=setInterval(()=>{
-            document.getElementById("timer").innerHTML=min +':'+sec
-            sec--
-            if(sec<0){
-                min--
-                sec=5
-                if(min<0){
-                    clearInterval(data)
-                    // alert('completed')
-                document.getElementById("pic").style.display='none'
-                }
-            }
+        // let min=1
+        // let sec=5
+        // let data=setInterval(()=>{
+        //     document.getElementById("timer").innerHTML=min +':'+sec
+        //     sec--
+        //     if(sec<0){
+        //         min--
+        //         sec=5
+        //         if(min<0){
+        //             clearInterval(data)
+        //             alert('completed')
+        //         document.getElementById("pic").style.display='none'
+        //         }
+        //     }
 
-        },1000)
+        // },1000)
+
+        //****************call back************************
+
+        // function demo(callback){
+        //     console.log('hello');
+        //     callback()
+
+            
+        // }
+
+        // function sample(){
+        //     console.log('its a callback function');
+
+            
+        // }
+        // demo(sample)
+
+        // //callback list
+
+        // function demo(callback){
+        //     console.log('hello');
+        //     callback(sample1)
+            
+        // }
+
+        // function sample(callback){
+        //     console.log('its a callback fun');
+        //     callback()
+            
+        // }
+
+        // function sample1(){
+        //     console.log('sample1');
+            
+        // }
+        // demo(sample)
+
+        //**************promise*****************
+
+        // const sample=new Promise((resolve,reject)=>{
+        //     if(10==10){
+        //         resolve('True')
+        //     }
+        //     else{
+        //         reject('False')
+        //     }
+        // })
+        // sample.then(result=>console.log(result)).catch(error=>console.log(error)).finally(()=>console.log('completed'));
+
+        //*************async wait****************
+
+        async function Demo(){
+            const promises=new Promise((resolve,reject)=>{
+                setTimeout(()=>resolve('data collected'),2000)
+            })
+            const result=await promises
+            console.log(result);
+            
+        }
+        Demo()
+        
 
     </script>
 
