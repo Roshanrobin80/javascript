@@ -154,19 +154,41 @@
 
         //*************async wait****************
 
-        async function Demo(){
-            const promises=new Promise((resolve,reject)=>{
-                setTimeout(()=>resolve('data collected'),2000)
-            })
-            const result=await promises
-            console.log(result);
+        // async function Demo(){
+        //     const promises=new Promise((resolve,reject)=>{
+        //         setTimeout(()=>resolve('data collected'),2000)
+        //     })
+        //     const result=await promises
+        //     console.log(result);
             
-        }
-        Demo()
-        
+        // }
+        // Demo()
 
+const main=async (url)=>{
+    try{
+        const response=await fetch(url)
+        const data=await response.json()
+        return[response,null]
+    }
+    catch (error){
+        return[null,error]
+    }
+}
+        
+const fetchdata=async()=>{
+    const[response,error]=await main("https://dummyjson.com/products")
+    if (response){
+        console.log(response);
+        
+    }
+    else{
+        console.log(error);
+        
+    }
+}
+fetchdata()
     </script>
 
-    <!-- <script src="sample.js"></script> -->
+<script src="sample.js"></script>
 </body>
 </html>
